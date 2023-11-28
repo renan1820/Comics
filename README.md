@@ -1,13 +1,10 @@
 # Comics
-Este Projeto é um teste onde temos uma lista de Comics da Marvel, onde foi feito usando a base do projeto e feito vários updates.
+Este Projeto é um teste onde temos uma lista de Comics da Marvel.
 
 Neste Projeto voce irá encontrar:
 
-- MVVM
-  A arquitetura usada neste projeto segue os padroes Model-View-ViewModel
-  
-- Jetpack Compose
-  Codigo de exemplo da implementação 
+- MVVM: A arquitetura usada neste projeto segue os padroes Model-View-ViewModel
+- Jetpack Compose: Código de exemplo da implementação 
 ```kotlin
 @Composable
 fun RetryContent(error: String, onRetry: () -> Unit, modifier: Modifier = Modifier){
@@ -26,8 +23,7 @@ fun RetryContent(error: String, onRetry: () -> Unit, modifier: Modifier = Modifi
 }
 
 ```
-- Compose Navigation
-  Função onde foi implementado a Navegação
+- Compose Navigation: Função onde foi implementado a Navegação
 ```kotlin
 @Composable
 fun NavGraphSetup(
@@ -42,8 +38,7 @@ fun NavGraphSetup(
 }
 
 ```
-- Hilt
-  Objeto onde mostramos parte da implementação da Injeção de Independencia
+- Hilt: Objeto onde mostramos parte da implementação da Injeção de Independencia
 ```kotlin
 @Module
 @InstallIn(SingletonComponent::class)
@@ -74,8 +69,7 @@ object AppModule {
     }
 }
 ```
-- Coroutines
-  Trecho do código dentro da viewModel onde mostrando a usabilidade do coroutines separando da Thread principal
+- Coroutines: Trecho do código dentro da viewModel onde mostrando a usabilidade do coroutines separando da Thread principal
 ```kotlin
 viewModelScope.launch {
             state = state.copy(isLoading = !bySwipe, swipeRefresh = bySwipe)
@@ -100,8 +94,7 @@ viewModelScope.launch {
             }
         }
 ```
-- Material Desing 3
-  Implementação do para usar ambos os temas Claro, Escuro e dinamico
+- Material Desing 3: Implementação do para usar ambos os temas Claro, Escuro e dinamico
 ```kotlin
     val replyColorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
@@ -126,8 +119,7 @@ viewModelScope.launch {
         content = content
     )
 ```
-- Retrofit
-  Nesta Função usamos nossa injeção de dependencia junto com o Retrofit e tambem um interceptador para analisar retorno da API
+- Retrofit: Nesta Função usamos nossa injeção de dependencia junto com o Retrofit e tambem um interceptador para analisar retorno da API
 ```kotlin
 @Provides
     @Singleton
@@ -147,8 +139,7 @@ viewModelScope.launch {
         return retrofit.create(ComicsApi::class.java)
     }
 ```
-- PullRefresh
-  Adicional um Swiper para realizar o refresh da Lista
+- PullRefresh: Adicional um Swiper para realizar o refresh da Lista
 ```kotlin
     val pullRefreshState = rememberPullRefreshState(state.swipeRefresh, viewModel::getComicsSwiper)
 
