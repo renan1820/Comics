@@ -1,5 +1,5 @@
 # Comics
-Este Projeto é de um teste, onde foi feito usando a base do projeto e feito vários updates.
+Este Projeto é um teste onde temos uma lista de Comics da Marvel, onde foi feito usando a base do projeto e feito vários updates.
 
 Neste Projeto voce irá encontrar:
 
